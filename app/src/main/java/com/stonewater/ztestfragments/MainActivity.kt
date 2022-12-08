@@ -19,5 +19,15 @@ class MainActivity : AppCompatActivity() {
             transaction.addToBackStack(null)
             transaction.commit()
         }
+
+        loadImageBtn.setOnClickListener{
+            val imageFragment = ImageFragment()
+            val manager = supportFragmentManager
+            val transaction = manager.beginTransaction()
+
+            transaction.replace(R.id.fragment_container, imageFragment)
+            transaction.addToBackStack(null)
+            transaction.commit()
+        }
     }
 }
